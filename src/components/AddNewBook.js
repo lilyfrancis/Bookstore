@@ -7,7 +7,7 @@ const AddNewBook = ({ addBookToStoreProps }) => {
   const [formInputs, setFormInputs] = useState({
     id: uuid(),
     title: '',
-    author: '',
+    category: '',
   });
 
   const onChange = (e) => {
@@ -19,36 +19,44 @@ const AddNewBook = ({ addBookToStoreProps }) => {
 
   const addBook = (e) => {
     e.preventDefault();
-    if (formInputs.title && formInputs.author) {
+    if (formInputs.title && formInputs.category) {
       const newBook = {
-        id: uuid(),
+        item_id: uuid(),
         title: formInputs.title,
-        author: formInputs.author,
+        category: formInputs.category,
       };
       addBookToStoreProps(newBook);
     }
   };
 
   return (
-    <form>
-      <input
-        type="text"
-        name="title"
-        placeholder="Book title"
-        onChange={onChange}
-        value={formInputs.title}
-        required
-      />
-      <input
-        type="text"
-        name="author"
-        placeholder="Author"
-        onChange={onChange}
-        value={formInputs.author}
-        required
-      />
-      <button type="button" onClick={addBook}>Add New Book</button>
-    </form>
+    <>
+      <p className="add-form-header">ADD NEW BOOK</p>
+      <form className="add-form">
+        <div className="add-form__left">
+          <input
+            type="text"
+            name="title"
+            placeholder="Book title"
+            onChange={onChange}
+            value={formInputs.title}
+            required
+          />
+        </div>
+        <div className="add-form__right">
+          <input
+            type="text"
+            className="add-form__input add-form__input--category"
+            name="category"
+            placeholder="Category"
+            onChange={onChange}
+            value={formInputs.category}
+            required
+          />
+          <button type="button" onClick={addBook} className="add-form__btn">Add Book</button>
+        </div>
+      </form>
+    </>
   );
 };
 
