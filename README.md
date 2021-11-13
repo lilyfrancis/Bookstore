@@ -80,7 +80,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - React and redux
 
 ## Live Demo
-[Live Demo Link]( https://lilianfrancis.com/Bookstore/)
+[Live Demo Link]( https://lilifrancis-bookstore.netlify.app/)
 
 ## Author
 👤 **Lilian Francis**
