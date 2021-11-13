@@ -5,18 +5,18 @@ const links = [
   {
     id: 1,
     path: '/',
-    text: 'Books',
+    text: 'BOOKS',
   },
   {
     id: 2,
     path: '/categories',
-    text: 'Categories',
+    text: 'CATEGORIES',
   },
 ];
 
 const Header = () => (
   <header>
-    <h4>Lilian Bookstore</h4>
+    <h4>Lilian BookShop</h4>
     <nav>
       <ul className="nav-ul">
         {links.map((link) => (
