@@ -16,7 +16,7 @@ const links = [
 
 const Header = () => (
   <header>
-    <h4>BookShop Paka</h4>
+    <h4>Lilian Bookstore</h4>
     <nav>
       <ul className="nav-ul">
         {links.map((link) => (
